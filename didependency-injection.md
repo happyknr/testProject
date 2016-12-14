@@ -100,5 +100,18 @@ public class User {
 
 #### &lt;property&gt; 태그 : 프로퍼티 방식 설정
 
-    &lt;code&gt;
+```
+<bean id="authFailLogger" class="net.madvirus.spring4.chap02.AuthFailLogger">
+    <property name="threshold" value="5"/>
+</bean>
+
+<bean id="authService" class="net.madvirus.spring4.chap02.AuthenticationService">
+    <property name="failLogger" ref="authfailLogger" />
+    <property name="userRepository">
+        <ref bean="userRepository" />
+    </property>
+</bean>
+```
+
+
 
