@@ -65,5 +65,8 @@ DI\(Dependency Injection\)
 
 &lt;/code&gt;
 
- - 
+* id를 설정하지 않을 경우에는 net.madvirus.spring4.chap02.AuthFailLogger\#0과 같이 '\#' 뒤에 숫자를 부여하여 생성됨
+
+
+
 
