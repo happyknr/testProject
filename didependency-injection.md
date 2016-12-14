@@ -59,5 +59,9 @@ DI\(Dependency Injection\)
 
 &lt;code&gt;
 
+**&lt;bean id**="authFailLogger" **class**="net.madvirus.spring4.chap02.AuthFailLogger"&gt;
+
+**&lt;/bean&gt;**
+
 &lt;/code&gt;
 
