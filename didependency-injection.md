@@ -98,7 +98,7 @@ public class User {
 </bean>
 ```
 
-
+#### &lt;property&gt; 태그 : 프로퍼티 방식 설정
 
 
 
