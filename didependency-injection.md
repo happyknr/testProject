@@ -67,6 +67,22 @@
 
 &lt;code&gt;
 
+public class User {
+
+public User\(String id, String password\){
+
+this.id = id;
+
+this.password = password;
+
+}
+
+}
+
+&lt;/code&gt;
+
+&lt;code&gt;
+
 &lt;bean id="user1" class="net.madvirus.spring4.chap02.User"&gt;
 
 &lt;**constructor-arg value="knr"** /&gt;
