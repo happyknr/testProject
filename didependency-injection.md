@@ -88,7 +88,14 @@ public class User {
 * 다른 빈\(bean\) 객체를 사용해야 하는 경우에는
 
 
-    &lt;code&gt;
+```
+<bean id="userRepository" class="net.madvirus.spring4.chap02.UserRepository">
+</bean>
 
+<bean id="pwChangeSvc" class="net.madvirus.spring4.chap02.PasswordChangeService">
+    <constructor-arg ref="userRepository"/>
+</bean>
+```
 
+ - 
 
