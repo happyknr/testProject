@@ -62,7 +62,7 @@
 
 #### &lt;constructor-arg&gt; 태그 : 생성자 방식 설정
 
-&lt;code&gt;
+    &lt;code&gt;
 
 public class User {
 
