@@ -29,7 +29,7 @@
 
 ##### 스프링 컨테이너 종류
 
-* BeanFactory
+* BeanFactory : 단순히 컨테이너에서 객체를 생성하고 DI를 처리해주는 기능만 제공
 * ApplicationContext
 
 
