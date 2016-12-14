@@ -53,7 +53,7 @@
 * 주요 속성 : id, class
 
 
-&lt;code&gt;
+    &lt;code&gt;
 
 **&lt;bean id**="authFailLogger" **class**="net.madvirus.spring4.chap02.AuthFailLogger"&gt;
 
