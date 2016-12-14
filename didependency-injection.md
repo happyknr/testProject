@@ -85,5 +85,5 @@ public class User {
 * 위 코드는 new User\("knr", "1234"\)와 같음
 * &lt;value&gt; 태그도 사용 가능 ex\) &lt;constructor-arg&gt;**&lt;value&gt;**knr**&lt;/value&gt;**&lt;/constructor-arg&gt;
 
-
+ - 
 
