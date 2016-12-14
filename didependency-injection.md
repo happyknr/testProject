@@ -106,7 +106,7 @@ public class User {
 </bean>
 
 <bean id="authService" class="net.madvirus.spring4.chap02.AuthenticationService">
-    <property name="failLogger" ref="authfailLogger" />
+    <property name="failLogger" ref="authfailLogger" /> <!-- setFailLogger(authFailLogger) -->
     <property name="userRepository">
         <ref bean="userRepository" />
     </property>
