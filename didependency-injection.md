@@ -73,15 +73,12 @@ public class User {
 }
 ```
 
-    &lt;code&gt;
-
-&lt;bean id="user1" class="net.madvirus.spring4.chap02.User"&gt;
-
-&lt;**constructor-arg value="knr"** /&gt;
-
-&lt;**constructor-arg value="1234"** /&gt;
-
-&lt;/code&gt;
+```
+<bean id="user1" class="net.madvirus.spring4.chap02.User">
+    <constructor-arg value="knr"/>
+    <constructor-arg value="1234"/>
+</bean
+```
 
 * 객체를 생성할 때 생성자에 전달할 파라미터 값을 설정해주어야 할 경우 &lt;constructor-arg&gt; 태그 사용
 * 파라미터 개수만큼 태그를 지정해주어야 함
