@@ -62,27 +62,18 @@
 
 #### &lt;constructor-arg&gt; 태그 : 생성자 방식 설정
 
-    &lt;code&gt;
-
+```
 public class User {
-
-...
-
-public User\(**String id, String password**\){
-
-this.id = id;
-
-this.password = password;
-
+    ...
+    public User(String id, String password) {
+        this.id = id;
+        this.password = password;
+    }
+    ...
 }
+```
 
-...
-
-}
-
-&lt;/code&gt;
-
-&lt;code&gt;
+    &lt;code&gt;
 
 &lt;bean id="user1" class="net.madvirus.spring4.chap02.User"&gt;
 
