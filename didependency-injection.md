@@ -69,9 +69,9 @@
 
 &lt;bean id="user1" class="net.madvirus.spring4.chap02.User"&gt;
 
-  &lt;constructor-arg value="knr" /&gt;
+&lt;**constructor-arg value="knr"** /&gt;
 
-  &lt;constructor-arg value="1234" /&gt;
+&lt;constructor-arg value="1234" /&gt;
 
 &lt;/code&gt;
 
