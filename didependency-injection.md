@@ -83,7 +83,7 @@ public class User {
 * 객체를 생성할 때 생성자에 전달할 파라미터 값을 설정해주어야 할 경우 &lt;constructor-arg&gt; 태그 사용
 * 파라미터 개수만큼 태그를 지정해주어야 함
 * 위 코드는 new User\("knr", "1234"\)와 같음
-* &lt;value&gt; 태그도 사용 가능 ex\) &lt;constructor-arg&gt;&lt;value&gt;knr&lt;/value&gt;&lt;/constructor-arg&gt;
+* &lt;value&gt; 태그도 사용 가능 ex\) &lt;constructor-arg&gt;&lt;value&gt;knr**&lt;/value&gt;**&lt;/constructor-arg&gt;
 
 
 
