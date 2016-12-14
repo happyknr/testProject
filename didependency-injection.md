@@ -53,9 +53,9 @@
 * 주요 속성 : id, class
 
 
-&lt;code&gt;
+&lt;code&gt; 
+
+
 
 &lt;/code&gt;
-
-
 
