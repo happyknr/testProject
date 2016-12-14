@@ -102,7 +102,7 @@ public class User {
 
 ```
 <bean id="authFailLogger" class="net.madvirus.spring4.chap02.AuthFailLogger">
-    <property name="threshold" value="5"/>
+    <property name="threshold" value="5"/> <!-- sertThreshold(5) -->
 </bean>
 
 <bean id="authService" class="net.madvirus.spring4.chap02.AuthenticationService">
