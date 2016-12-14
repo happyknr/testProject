@@ -65,5 +65,13 @@
 
 #### &lt;constructor-arg&gt; 태그 : 생성자 방식 설정
 
+&lt;code&gt;
 
+&lt;bean id="user1" class="net.madvirus.spring4.chap02.User"&gt;
+
+  &lt;constructor-arg value="knr" /&gt;
+
+  &lt;constructor-arg value="1234" /&gt;
+
+&lt;/code&gt;
 
