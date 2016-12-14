@@ -63,5 +63,7 @@
 
 * id를 설정하지 않을 경우에는 net.madvirus.spring4.chap02.AuthFailLogger**\#0**과 같이 **'\#' 뒤에 숫자**를 부여하여 생성됨
 
+#### &lt;constructor-arg&gt; 태그 : 생성자 방식 설정
+
 
 
