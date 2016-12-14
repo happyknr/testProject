@@ -1,8 +1,4 @@
-&lt;dkjl
-
-# 
-
-DI\(Dependency Injection\)
+# DI\(Dependency Injection\)
 
 설명
 
