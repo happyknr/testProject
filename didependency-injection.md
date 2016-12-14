@@ -53,13 +53,10 @@
 * 주요 속성 : id, class
 
 
-    &lt;code&gt;
-
-**&lt;bean id**="authFailLogger" **class**="net.madvirus.spring4.chap02.AuthFailLogger"&gt;
-
-**&lt;/bean&gt;**
-
-&lt;/code&gt;
+```
+<bean id="authFailLogger" class="net.madvirus.spring4.chap02.AuthFailLogger">
+</bean>
+```
 
 * id를 설정하지 않을 경우에는 net.madvirus.spring4.chap02.AuthFailLogger**\#0**과 같이 **'\#' 뒤에 숫자**를 부여하여 생성됨
 
