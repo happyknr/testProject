@@ -94,8 +94,11 @@ public class User {
 
 <bean id="pwChangeSvc" class="net.madvirus.spring4.chap02.PasswordChangeService">
     <constructor-arg ref="userRepository"/>
+    <!-- <constructor-arg><ref bean="userRepository"/></constructor-arg> 도 가능함 -->
 </bean>
 ```
 
- - 
+
+
+
 
