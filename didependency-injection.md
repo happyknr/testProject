@@ -146,6 +146,7 @@ ctx = new GenericXmlApplicationContext("classpath:/conf/spring-*.xml");
 </list>
 ...
 
+
 <!-- 위 코드를 자바 코드로 실행시 -->
 List<User> refs = new List<>();
 refs.add(user1);
@@ -198,6 +199,7 @@ userRepository.setUsers(refs);
         </value>
     </property>
 </bean>
+
 
 <!-- 자바 형식 -->
 Properties prop = new Properties();
