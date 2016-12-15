@@ -191,6 +191,12 @@ userRepository.setUsers(refs);
             <prop key="retry">3</prop>
         </props>
     </property>
+    <property name="additionalInfo2">
+        <value>
+            threshold=3000
+            retry=5
+        </value>
+    </property>
 </bean>
 
 <!-- 자바 형식 -->
