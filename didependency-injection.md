@@ -212,10 +212,21 @@ sensor1.setAdditionalInfo(prop);
 
 ```
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:c="http://www.springframework.org/schema/c" <!-- c 네임스페이스 -->
-	xmlns:p="http://www.springframework.org/schema/p" <!-- p 네임스페이스 -->
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:c="http://www.springframework.org/schema/c" <!-- c 네임스페이스 -->
+    xmlns:p="http://www.springframework.org/schema/p" <!-- p 네임스페이스 -->
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="user1" class="net.madvirus.spring4.chap02.User" c:id="knr" c:password="1234" />
+    <bean id="user2" class="net.madvirus.spring4.chap02.User" c:_0="test" c:_1="qwer" />
+    <bean id="pwChangeSvc" class="net.madvirus.spring4.chap02.PasswordChangeService" c:userRepository-ref="userRepository />
+    <bean id="authFailLogger" class="net.madvirus.spring4.chap02.AuthFailLogger" p:threshold="2" />
+    <bean id="authenticationService" class="net.madvirus.spring4.chap02.AuthenticationService" 
+                        p:failLogger-ref="authFailLogger" p:userRepository-ref="userRepository" />
+    <bean id="userRepository" class="net.madvirus.spring4.chap02.UserRepository">
+     ...
+    </bean>
+</beans> 
 ```
 
 
