@@ -154,9 +154,11 @@ userRepository.setUsers(refs);
 ```
 
 * Map : &lt;map&gt;
+* &lt;map&gt;태그는 &lt;entry&gt; 태그를 이용해 \(키,값\) 쌍 목록을 전달함
 
+```
 
-    &lt;code&gt;
+```
 
 
 
