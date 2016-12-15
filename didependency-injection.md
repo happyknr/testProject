@@ -253,6 +253,7 @@ sensor1.setAdditionalInfo(prop);
 #### @Configuration과 @Bean을 이용한 빈 객체 설정
 
 ```
+/* 설정 */
 @Configuration //클래스를 스프링 설정으로 사용함을 의미
 public class Config {
     @Bean //메서드의 리턴 값을 빈 객체로 사용함을 의미
@@ -260,6 +261,11 @@ public class Config {
         return new User("knr", "1234");
     }
 }
+
+
+/* 사용 */
+AnnotationConfigapplicationContext ctx = new AnnotationConfigApplicationContext(Config.class);
+User user1 = ctx.getBean("user1", User.class);
 ```
 
 
