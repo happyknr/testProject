@@ -130,5 +130,47 @@ ctx = new GenericXmlApplicationContext("file:/conf/local/conf2.xml"); //상대 �
 ctx = new GenericXmlApplicationContext("classpath:/conf/spring-*.xml");
 ```
 
+#### List, Map, Set 타입의 콜렌션 설정
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
