@@ -277,7 +277,10 @@ User user1 = ctx.getBean("user1", User.class);
 
 #### 의존 설정하기
 
- - 
+* 생성자나 프로퍼티에 값을 설정할 때에는 직접 설정
+
+
+    &lt;code&gt;
 
 
 
