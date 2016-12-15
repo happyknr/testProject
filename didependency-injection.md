@@ -156,8 +156,19 @@ userRepository.setUsers(refs);
 * Map : &lt;map&gt;
 * &lt;map&gt;태그는 &lt;entry&gt; 태그를 이용해 \(키,값\) 쌍 목록을 전달함
 
-
-    &lt;code&gt;
+```
+...
+<map>
+    <entry>
+        <key>
+            <value>frontDoor</value>
+        </key>
+        <ref bean="sensor1" />
+    </entry>
+    <entry key="backDoor" value-ref="sensor2"/>
+</map>
+...
+```
 
 
 
