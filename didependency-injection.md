@@ -113,5 +113,9 @@ public class User {
 </bean>
 ```
 
+#### GenericXmlApplicationContext : 설정 파일 지정
+
+
+
 
 
