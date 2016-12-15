@@ -279,8 +279,19 @@ User user1 = ctx.getBean("user1", User.class);
 
 * 생성자나 프로퍼티에 값을 설정할 때에는 직접 설정
 
+```
+@Bean
+public User user {
+    return new User("knr", "1234"); //생성자에 값 직접 전달
+}
 
-    &lt;code&gt;
+@Bean
+public AuthFailLogger authFailLogger() {
+    AuthFailLogger logger = new AuthFailLogger();
+    logger.setThreshold(2); //프로퍼티에 값 직접 전달
+    return logger;
+}
+```
 
 
 
