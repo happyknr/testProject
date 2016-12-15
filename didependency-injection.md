@@ -248,8 +248,9 @@ sensor1.setAdditionalInfo(prop);
 
 * property 파일이 각기다른 경로에 존재할 경우 사용
 
-
 ### 자바 코드를 이용한 DI 설정
+
+#### @Configuration과 @Bean을 이용한 빈 객체 설정
 
 
 
