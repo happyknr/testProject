@@ -133,8 +133,6 @@ ctx = new GenericXmlApplicationContext("classpath:/conf/spring-*.xml");
 #### List, Map, Set 타입의 콜렌션 설정
 
 * List : &lt;list&gt;
-* Map : &lt;map&gt;
-* Set : &lt;set&gt;
 
 ```
 ...
@@ -146,7 +144,14 @@ ctx = new GenericXmlApplicationContext("classpath:/conf/spring-*.xml");
     <value>10.0.1</value>
     <value>12.5.1</value>
 </list>
+...
+
+<!-- 위 코드를 자바 코드로 실행시 -->
+List<User> refs = new List<>();
+refs.add(user1);
+refs.add(user2);
+userRepository.setUsers(refs);
 ```
 
-
+ - 
 
