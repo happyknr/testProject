@@ -183,5 +183,16 @@ userRepository.setUsers(refs);
 
 #### Properties 타입 값 설정
 
-    &lt;code&gt;
+```
+<bean id="sensor1" class="net.madvirus.spring4.chap02.sensor.Sensor">
+    <property name="additionalInfo">
+        <props>
+            <prop key="threshold">1500</prop>
+            <prop key="retry">3</prop>
+        </props>
+    </property>
+</bean>
+```
+
+
 
