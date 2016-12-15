@@ -256,7 +256,7 @@ sensor1.setAdditionalInfo(prop);
 @Configuration //클래스를 스프링 설정으로 사용함을 의미
 public class Config {
     @Bean //메서드의 리턴 값을 빈 객체로 사용함을 의미
-    public User user1() {
+    public User user1() { //메서드의 이름을 빈 객체 식별자로 사용
         return new User("knr", "1234");
     }
 }
