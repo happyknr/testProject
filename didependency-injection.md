@@ -115,7 +115,5 @@ public class User {
 
 #### GenericXmlApplicationContext : 설정 파일 지정
 
-
-
-
+    &lt;code&gt;
 
