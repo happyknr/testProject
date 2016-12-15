@@ -252,7 +252,5 @@ sensor1.setAdditionalInfo(prop);
 
 #### @Configuration과 @Bean을 이용한 빈 객체 설정
 
-
-
-
+    &lt;code&gt;
 
