@@ -208,11 +208,11 @@ sensor1.setAdditionalInfo(prop);
 
 #### c 네임스페이스와 p 네임스페이스를 생성자 방식/프로퍼티 방식 설정
 
-&lt;property&gt; 태그의 &lt;constructor-arg&gt; 태그를 사용하면, 작성해야 할 XML 문서 내용이 증가함. 이를 좀 더 짧게 설정할 때 사용.
+ - &lt;property&gt; 태그의 &lt;constructor-arg&gt; 태그를 사용하면, 작성해야 할 XML 문서 내용이 증가함. 이를 좀 더 짧게 설정할 때 사용.
 
-    &lt;code&gt;
-
-
+```
+&lt;code&gt;
+```
 
 
 
