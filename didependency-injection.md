@@ -211,7 +211,11 @@ sensor1.setAdditionalInfo(prop);
 * &lt;property&gt; 태그의 &lt;constructor-arg&gt; 태그를 사용하면, 작성해야 할 XML 문서 내용이 증가함. 이를 좀 더 짧게 설정할 때 사용.
 
 ```
-
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c" <!-- c 네임스페이스 -->
+	xmlns:p="http://www.springframework.org/schema/p" <!-- p 네임스페이스 -->
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 ```
 
 
