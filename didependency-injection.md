@@ -296,8 +296,37 @@ public AuthFailLogger authFailLogger() {
 * ★메소드를 호출해서 의존을 설정할 때 새로운 객체가 생성되지 않음!!★
 * 이유 : 스프링이 설정 클래스를 상속받아 새로운 클래스를 만들어내기 때문!
 
+```
+@Bean
+public PasswordChangeService pwChangeSvc() {
+	return new PasswordChangeService(userRepository()); //여기서 생성된 객체와
+}
 
-    &lt;code&gt;
+@Bean
+public AuthenticationService authenticationService() {
+	AuthenticationService authSvc = new AuthenticationService();
+	authSvc.setFailLogger(authFailLogger());
+	authSvc.setUserRepository(userRepository()); //여기서 생성된 객체는 일치함!!
+	return authSvc;
+}
+
+
+//이유 : 아래와 같이 userRepository()메서드는 상위 클래스에 정의된 userRepository() 메서드를 재정의하고 있는데, 재정의한
+	 메서드는 userRepository 필드가 null이면 상위 클래스의 userRepository() 메서드를 호출해서 userRepository 필드에 
+	 할당하고 userRepository 필드를 리턴한다. 
+	 따라서 메서드를 여러번 호출해도 userRepository 필드에 할당된 동일한 객체를 리턴한다.
+public class SpringGenConfig extends Config {
+	private UserRepository userRepository;
+	
+	@Override
+	public UserRepository userRepository() {
+		if(userRepository == null) {
+			userRepository = super.userRepository();
+		}
+		return userRepository;
+	}
+}
+```
 
 
 
