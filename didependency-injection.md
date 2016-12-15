@@ -226,8 +226,8 @@ sensor1.setAdditionalInfo(prop);
     <bean id="userRepository" class="net.madvirus.spring4.chap02.UserRepository">
      ...
     </bean>
-</beans> 
+</beans>
 ```
 
-
+ - 
 
