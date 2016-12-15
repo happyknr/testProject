@@ -293,5 +293,10 @@ public AuthFailLogger authFailLogger() {
 }
 ```
 
- - 
+* ★메소드를 호출해서 의존을 설정할 때 새로운 객체가 생성되지 않음!!★
+
+
+    - 
+
+
 
