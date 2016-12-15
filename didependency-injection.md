@@ -185,13 +185,13 @@ userRepository.setUsers(refs);
 
 ```
 <bean id="sensor1" class="net.madvirus.spring4.chap02.sensor.Sensor">
-    <property name="additionalInfo">
+    <property name="additionalInfo"> <!-- 형식1 -->
         <props>
             <prop key="threshold">1500</prop>
             <prop key="retry">3</prop>
         </props>
     </property>
-    <property name="additionalInfo2">
+    <property name="additionalInfo2"> <!-- 형식2 -->
         <value>
             threshold=3000
             retry=5
