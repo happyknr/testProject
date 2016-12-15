@@ -328,5 +328,10 @@ public class SpringGenConfig extends Config {
 }
 ```
 
- - 
+* Config 클래스를 스프링 설정으로 사용하려면, AnnotationConfigApplicationContext 클래스를 사용
+
+
+    &lt;code&gt;
+
+
 
