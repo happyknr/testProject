@@ -192,6 +192,12 @@ userRepository.setUsers(refs);
         </props>
     </property>
 </bean>
+
+<!-- 자바 형식 -->
+Properties prop = new Properties();
+prop.setProperty("threshold", "1500");
+prop.setProperty("retry", "3");
+sensor1.setAdditionalInfo(prop);
 ```
 
 
