@@ -132,8 +132,9 @@ ctx = new GenericXmlApplicationContext("classpath:/conf/spring-*.xml");
 
 #### List, Map, Set 타입의 콜렌션 설정
 
-* List --&gt; 
-
+* List : &lt;list&gt;
+* Map : &lt;map&gt;
+* Set : &lt;set&gt;
 
 
 
