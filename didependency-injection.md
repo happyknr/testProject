@@ -115,5 +115,10 @@ public class User {
 
 #### GenericXmlApplicationContext : 설정 파일 지정
 
-    &lt;code&gt;
+```
+GenericXmlApplicationContext ctx = new GenericXmlApplicationContext("classpth:/spring-member.xml", 
+                                "spring:/spring-board.xml", "spring:/datasource.xml"); //여러개 지정 가능
+```
+
+
 
