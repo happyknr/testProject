@@ -118,6 +118,13 @@ public class User {
 ```
 GenericXmlApplicationContext ctx = new GenericXmlApplicationContext("classpth:/spring-member.xml", 
                                 "spring:/spring-board.xml", "spring:/datasource.xml"); //여러개 지정 가능
+
+//클래스패스 루트가 아닌 다른 곳에 위치할 경우에는 루트 기준으로 경로 형식 입력
+ctx = new GenericXmlApplicationContext("classpth:/conf/spring/conf.xml");
+
+//파일 시스템에서 설정 파일 읽어올 경우 : file:접두어
+ctx = new GenericXmlApplicationContext("file:src/main/resources/conf.xml");
+ctx = new GenericXmlApplicationContext("fild:/conf/local/conf2.xml"); //상대 경로
 ```
 
 
