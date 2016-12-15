@@ -262,6 +262,11 @@ public class Config {
     public User user1() { //메서드의 이름을 빈 객체 식별자로 사용
         return new User("knr", "1234");
     }
+    
+    @Bean(name="user2") //메서드 이름 대신 다른 식별자 값을 주고 싶을 때 사용
+    public User user() {
+        return new User("test", "1234");
+    }
 }
 
 
