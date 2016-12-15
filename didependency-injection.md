@@ -136,8 +136,17 @@ ctx = new GenericXmlApplicationContext("classpath:/conf/spring-*.xml");
 * Map : &lt;map&gt;
 * Set : &lt;set&gt;
 
-
-    &lt;code&gt;
+```
+...
+<list>
+    <!-- 객체 형태로 전달시 -->
+    <ref bean="user1"/>
+    <ref bean="user2"/>
+    <!-- Integer, String 등의 타입 -->
+    <value>10.0.1</value>
+    <value>12.5.1</value>
+</list>
+```
 
 
 
