@@ -124,7 +124,10 @@ ctx = new GenericXmlApplicationContext("classpth:/conf/spring/conf.xml");
 
 //파일 시스템에서 설정 파일 읽어올 경우 : file:접두어
 ctx = new GenericXmlApplicationContext("file:src/main/resources/conf.xml");
-ctx = new GenericXmlApplicationContext("fild:/conf/local/conf2.xml"); //상대 경로
+ctx = new GenericXmlApplicationContext("file:/conf/local/conf2.xml"); //상대 경로
+
+//특정 경로에 있는 모든 xml 파일
+ctx = new GenericXmlApplicationContext("classpath:/conf/spring-*.xml");
 ```
 
 
