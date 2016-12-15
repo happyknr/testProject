@@ -294,9 +294,10 @@ public AuthFailLogger authFailLogger() {
 ```
 
 * ★메소드를 호출해서 의존을 설정할 때 새로운 객체가 생성되지 않음!!★
+* 이유 : 스프링이 설정 클래스를 상속받아 새로운 클래스를 만들어내기 때문!
 
+    &lt;code&gt;
 
-    - 
 
 
 
