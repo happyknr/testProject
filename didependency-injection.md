@@ -330,8 +330,16 @@ public class SpringGenConfig extends Config {
 
 * Config 클래스를 스프링 설정으로 사용하려면, AnnotationConfigApplicationContext 클래스를 사용
 
+```
+AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(Config.class);
 
-    &lt;code&gt;
+//두개 이상의 설정 정보도 가능
+AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(Config.class, configSensor.class);
+
+//특정 패키지 내에 존재하는 설정 정보들 모두 사용할 경우 : "패키지.conf"
+//패키지 경로를 전달하면, 해당 패키지 및 그 하위 패키지에 위치한 @Configuration 어노테이션이 적용된 모든 클래스를 설정함
+AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext("net.madvirus.spring4.chap02.conf");
+```
 
 
 
