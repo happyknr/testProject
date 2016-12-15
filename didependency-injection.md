@@ -172,8 +172,16 @@ userRepository.setUsers(refs);
 
 * Set : &lt;set&gt;
 
+```
+...
+<set>
+    <value>200</value>
+    <value>300</value>
+</set>
+...
+```
+
+#### Properties 타입 값 설정
 
     &lt;code&gt;
-
-
 
