@@ -208,5 +208,5 @@ sensor1.setAdditionalInfo(prop);
 
 #### c 네임스페이스와 p 네임스페이스를 생성자 방식/프로퍼티 방식 설정
 
-
+ - 
 
