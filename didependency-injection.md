@@ -241,14 +241,10 @@ sensor1.setAdditionalInfo(prop);
 
 #### &lt;import&gt; 태그를 이용한 설정 파일 조합
 
- - 
-
-```
+...  
+&lt;import resource="classpath:/domain/item/\*.xml"/&gt;  
+&lt;import resource="classpath:/domain/order/\*.xml"/&gt;  
 ...
-<import resource="classpath:/domain/item/*.xml"/>
-<import resource="classpath:/domain/order/*.xml"/>
-...
-```
 
 
 
