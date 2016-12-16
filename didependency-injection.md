@@ -382,23 +382,8 @@ public class Config {
 
 #### XML 설정에서 자바 코드 설정 조합하기
 
-
-
- - &lt;context:annotation-config /&gt; 설정 추가
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+* &lt;context:annotation-config /&gt; 설정 추가
+* @Configuration 어노테이션이 적용된 클래스를 &lt;bean&gt; 태그를 이용해서 스프링 빈으로 등록함
 
 
 
