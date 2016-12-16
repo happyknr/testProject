@@ -396,7 +396,7 @@ public class ConfigSensor {
 }
 ...
 
-// xml 파일 설정
+<!-- xml 파일 설정 -->
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:context="http://www.springframework.org/schema/context"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
