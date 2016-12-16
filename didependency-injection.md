@@ -415,11 +415,25 @@ public class ConfigSensor {
 
 #### 자바 코드 설정에서 XML 설정 조합하기
 
-@ImportantResource 어노테이션 사용
+ - @ImportantResource 어노테이션 사용
 
-    &lt;code&gt;
+```
+@Configuration
+@ImportantResource("classpath:config-sensor.xml")
+public class ConfigWithXmlImport {
+    @Bean
+    public User user1() {
+        return new User("knr", "1234");
+    }
+    ...
+}
+```
 
+### 팩토리 방식의 스프링 빈 설정
 
+ - 객체 생성에 사용되는 static 메서드 지정
+
+#### 객체 생성을 위한 정적 메서드 설정
 
 
 
