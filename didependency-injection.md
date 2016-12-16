@@ -382,15 +382,9 @@ public class Config {
 
 #### XML 설정에서 자바 코드 설정 조합하기
 
- - 
 
 
-
-
-
-
-
-
+ - &lt;context:annotation-config /&gt; 설정 추가
 
 
 
