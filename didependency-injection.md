@@ -354,7 +354,7 @@ public class Config {
 
 * XML설정 vs 자바 설정
 
-XML 설정 \| 자바 설정
+    XML 설정 \| 자바 설정
 
-가나다 \| 라마바
+    가나다 \| 라마바
 
