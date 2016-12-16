@@ -410,7 +410,7 @@ public class ConfigSensor {
 
 <!-- @Configuration 적용 클래스를 빈으로 등록 -->
 <bean class="net.madvirus.spring4.chap02.conf.ConfigSensor" />
-
+...
 ```
 
 
