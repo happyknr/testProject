@@ -415,7 +415,7 @@ public class ConfigSensor {
 
 #### 자바 코드 설정에서 XML 설정 조합하기
 
- - @ImportantResource 어노테이션 사용
+* @ImportantResource 어노테이션 사용
 
 ```
 @Configuration
@@ -431,7 +431,8 @@ public class ConfigWithXmlImport {
 
 ### 팩토리 방식의 스프링 빈 설정
 
- - 객체 생성에 사용되는 static 메서드 지정
+* 객체 생성에 사용되는 static 메서드 지정
+* FactoryBean 인터페이스를 이용한 객체 생성 처리
 
 #### 객체 생성을 위한 정적 메서드 설정
 
