@@ -415,8 +415,11 @@ public class ConfigSensor {
 
 #### 자바 코드 설정에서 XML 설정 조합하기
 
-* @ImportantResource 어노테이션 사용
+@ImportantResource 어노테이션 사용
 
     &lt;code&gt;
+
+
+
 
 
