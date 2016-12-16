@@ -341,5 +341,8 @@ AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(
 AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext("net.madvirus.spring4.chap02.conf");
 ```
 
- - 
+* @Import 어노테이션을 이용한 조합
+
+
+
 
