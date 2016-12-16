@@ -385,7 +385,33 @@ public class Config {
 * &lt;context:annotation-config /&gt; 설정 추가
 * @Configuration 어노테이션이 적용된 클래스를 &lt;bean&gt; 태그를 이용해서 스프링 빈으로 등록함
 
+```
+// 클래스 파일
+@Configuration
+public class ConfigSensor {
+    @Bean
+    public Sensor sensor1() {
+        ...
+    }
+}
+...
+
+// xml 파일 설정
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans   
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+<!-- @Configuration이 적용된 빈을 스프링 설정으로 사용하기 위함 -->
+<context:annotation-config /> <!-- 어노테이션을 인식할 수 있도록 만들어주는 태그 -->
+
+<!-- @Configuration 적용 클래스를 빈으로 등록 -->
+<bean class="net.madvirus.spring4.chap02.conf.ConfigSensor" />
+
+```
 
 
-    &lt;code&gt;
 
