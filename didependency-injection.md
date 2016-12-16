@@ -413,5 +413,9 @@ public class ConfigSensor {
 ...
 ```
 
+#### 자바 코드 설정에서 XML 설정 조합하기
+
+
+
 
 
