@@ -581,13 +581,46 @@ public class ProductService {
 
 * 위와 같은 경우 @Qualifier 어노테이션을 함께 사용하여 한정자를 지정해줌
 
+```
+<!-- XML 설정 -->
+<bean id="orderSearchClientFactory" class="net.madvirus.spring4.chap02.search.SearchClientFactoryBean">
+    <qualifier value="order" /> <!-- 한정자 지정 -->
+    <property name="server" value="10.20.30.40" />
+    ...
+</bean>
 
 
+/* 자바 설정 */
+@Configuration
+public class ConfigShop {
+    @Bean
+    @Qualifier("order") <-- 한정자 지정 -->
+    public SearchClientFactoryBean orderSearchClientFactory() {
+        SearchClientFactoryBean searchClientFactoryBean = new SearchClientFactoryBean();
+        ...
+        
+        return searchClientFactoryBean;
+    }
+}
 
 
+/* 자바 */
+import org.springframework.beans.factory.annotation.Qualifier;
+
+public class OrderService {
+    private ErpClientFactory erpClientFactory;
+    
+    @Autowired
+    @Qualifier("order") /* 필드 예제 */
+    private SearchClientFactory searchClientFactory;
+    
+    @Autowired
+    public OrderService(ErpClientFactory erpClientFactory, 
+        @Qualifier("order") SearchClientFactory searchClientFactory) { /* 생성자 예제 */
+         this.erpClientFactory = erpClientFactory;
+         this.searchClientFactory = searchClientFactory;
+    }
+```
 
 
-
-
-    &lt;code&gt;
 
