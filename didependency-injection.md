@@ -571,7 +571,7 @@ public Class OrderService {
    --> 익셉션 발생 */
 public class ProductService {
     private SearchClientFactory searchClientFactory;
-    
+
     @Autowired
     public void setSearchClientFactory(SearchClientFactory searchClientFactory) {
         this.searchClientFactory = searchClientFactory;
@@ -579,5 +579,7 @@ public class ProductService {
 }
 ```
 
- - 위와 같은 경우 @Qualifier 어노테이션을 함께 사용
+* 위와 같은 경우 @Qualifier 어노테이션을 함께 사용하여 한정자를 지정해줌
+
+
 
