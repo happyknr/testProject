@@ -477,12 +477,21 @@ public interface FactoryBean<T> {
 
 * @Autowired 어노테이션
 * @Resource 어노테이션
-
-@Inject 어노테이션  등등
-
+* @Inject 어노테이션  등등
 
 
-    &lt;code&gt;
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context http;//www.springframework.org/schema/context/spring-context.xsd">
+	
+	<context:annotation-config /> <!-- 이 태그를 추가해야 어노테이션 인식할 수 있음 -->
+	...	
+</bean>
+```
 
 
 
