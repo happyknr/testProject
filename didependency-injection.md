@@ -661,14 +661,20 @@ public class ProductService {
 
 * 필드, 메서드, 생성자에 적용할 수 있음
 
+```
+public class OrderService {
+    ...
+    @Inject
+    public void setErpClientFactory(ErpClientFactory erpClientFactory) {
+        this.erpClientFactory = erpClientFactory;
+    }
+    
+    @Inject
+    public void setSearchClientFactory(@Named("orderSearchClientFactory") SearchClientFactory searchClientFactory) {
+        this.searchClientFactory = searchClientFactory;
+    }
+}
+```
 
 
-
-
-
-
-
-
-
-    &lt;code&gt;
 
