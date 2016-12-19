@@ -463,15 +463,13 @@ public abstract class ErpClientFactory {
 
 * 스프링 빈으로 정의하고 싶은 타입이 XML 설정으로 빈을 정의하기에는 다소 복잡한 경우 FactoryBean 인터페이스 사용
 
-
-
-
-
-
-
-
-
-    &lt;code&gt;
+```
+public interface FactoryBean<T> {
+    T getObject() throws Exception; //실제 스프링 빈으로 사용될 객체를 리턴
+    Class<?> getObjectType(); //스프링 빈으로 사용될 객체의 타입을 리턴
+    boolean isSingleton(); //getObject() 메서드가 매번 동일한 객체를 리턴하면 true, 매번 새로운 객체를 리턴하면 false를 리턴
+}
+```
 
 
 
