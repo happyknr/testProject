@@ -649,6 +649,7 @@ public class ProductService {
 #### @Inject 어노테이션을 이용한 의존 자동 설정
 
 * DI\(Dependency Injection\) 목적으로 만들어진 어노테이션
+* 필드, 메서드, 생성자에 적용할 수 있음
 * @Inject 어노테이션을 사용하려면 jar 파일을 추가해야 함
 
 ```
