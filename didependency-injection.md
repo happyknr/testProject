@@ -479,5 +479,5 @@ public interface FactoryBean<T> {
 * @Resource 어노테이션
 * @Inject 어노테이션  등등
 
-
+    &lt;code&gt;
 
