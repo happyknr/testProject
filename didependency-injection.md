@@ -477,7 +477,12 @@ public interface FactoryBean<T> {
 
 * @Autowired 어노테이션
 * @Resource 어노테이션
-* @Inject 어노테이션  등등
+
+@Inject 어노테이션  등등
+
+
 
     &lt;code&gt;
+
+
 
