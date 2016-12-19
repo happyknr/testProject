@@ -635,13 +635,13 @@ import javax.annotation.Resource;
 
 public class ProductService {
     private SearchClientFactory searchClientFactory;
-    
-    @Resource(name="productSearchClientFactory")
+
+    @Resource(name="productSearchClientFactory") <!-- @Resource 어노테이션 사용 예제 -->
     public void setSearchClientFactory(SearchClientFactory searchClientFactory) {
         this.searchClientFactory = searchClientFactory;
     }
 }
 ```
 
-
+ - @Resource 어노테이션의 name 속성에 지정한 이름을 갖는 빈 객체가 존재하지 않을 경우 익셉션 발생
 
