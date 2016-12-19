@@ -501,12 +501,11 @@ public interface FactoryBean<T> {
 * org.springframework.beans.factory.annotation.Autowired
 * @Autowired 어노테이션은 생성자, 필드, 메서드에 적용 가능
 
-
 ```
 public class OrderService {
     private ErpClientFactory erpClientFactory;
-    
-    @Autowired
+
+    <b>@Autowired</b>
     public void setErpClientFactory(ErpClientFactory erpClientFactory) {
         this.erpClientFactory = erpClientFactory;
     }
