@@ -461,15 +461,11 @@ public abstract class ErpClientFactory {
 
 #### FactoryBean 인터페이스를 이용한 객체 생성 처리
 
-스프링 빈으로 정의하고 싶은 타입이 XML 설정으로 빈을 정의하기에는 다소 복잡한 경우 FactoryBean 인터페이스 사용
+ - 스프링 빈으로 정의하고 싶은 타입이 XML 설정으로 빈을 정의하기에는 다소 복잡한 경우 FactoryBean 인터페이스 사용
 
+```
 
-
-    &lt;code&gt;
-
-
-
-
+```
 
 
 
