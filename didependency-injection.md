@@ -475,5 +475,9 @@ public interface FactoryBean<T> {
 
 ### 어노테이션을 이용한 객체간 의존 자동 연결
 
- - @Autowired
+* @Autowired 어노테이션
+* @Resource 어노테이션
+* @Inject 어노테이션  등등
+
+
 
