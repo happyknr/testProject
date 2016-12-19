@@ -505,7 +505,7 @@ public interface FactoryBean<T> {
 public class OrderService {
     private ErpClientFactory erpClientFactory;
 
-    <b>@Autowired</b>
+    @Autowired
     public void setErpClientFactory(ErpClientFactory erpClientFactory) {
         this.erpClientFactory = erpClientFactory;
     }
