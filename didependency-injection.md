@@ -479,19 +479,24 @@ public interface FactoryBean<T> {
 * @Resource 어노테이션
 * @Inject 어노테이션  등등
 
-
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:context="http://www.springframework.org/schema/context"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-	http://www.springframework.org/schema/context http;//www.springframework.org/schema/context/spring-context.xsd">
-	
-	<context:annotation-config /> <!-- 이 태그를 추가해야 어노테이션 인식할 수 있음 -->
-	...	
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context http;//www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:annotation-config /> <!-- 이 태그를 추가해야 어노테이션 인식할 수 있음 -->
+    ...
+    
+    <!-- 아래와 같이 해당 전처리기를 직접 등록해도 됨 -->
+    <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />
+    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" />    
 </bean>
 ```
+
+#### @Autowired 어노테이션을 이용한 의존 자동 설정
 
 
 
