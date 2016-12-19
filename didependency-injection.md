@@ -552,5 +552,11 @@ public Class OrderService {
 }
 ```
 
+#### @Qualifier 어노테이션을 이용한 자동 설정 제한
+
+
+
+    &lt;code&gt;
+
 
 
