@@ -544,5 +544,13 @@ public class OrderService {
 }
 ```
 
-    &lt;code&gt;
+```
+//익셉션을 발생시키지 않고 단순히 null로 값을 유지하고 싶을 때
+public Class OrderService {
+    @Autowired(required = false)
+    private Monitor monitor;
+}
+```
+
+
 
