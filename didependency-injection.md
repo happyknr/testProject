@@ -554,9 +554,30 @@ public Class OrderService {
 
 #### @Qualifier 어노테이션을 이용한 자동 설정 제한
 
+```
+<!-- 동일한 타입의 빈 객체를 두 개 이상 정의 -->
+<bean id="orderSearchClientFactory"
+    class="net.madvirus.spring4.chap02.search.SearchClientFactory">
+        ...
+</bean>
+
+<bean id="productSearchClientFactory"
+    class="net.madvirus.spring4.chap02.search.SearchClientFactory">
+        ...
+</bean>
 
 
-    &lt;code&gt;
+/* 빈 객체가 두 개 이상 존재하기 때문에 스프링은 setSearchClientFactory()메서드에 어떤 빈 객체를 주입해야 하는지 알 수 없음
+   --> 익셉션 발생 */
+public class ProductService {
+    private SearchClientFactory searchClientFactory;
+    
+    @Autowired
+    public void setSearchClientFactory(SearchClientFactory searchClientFactory) {
+        this.searchClientFactory = searchClientFactory;
+    }
+}
+```
 
-
+ - 위와 같은 경우 @Qualifier 어노테이션을 함께 사용
 
