@@ -627,8 +627,16 @@ public class OrderService {
 #### @Resource 어노테이션을 이용한 의존 자동 설정
 
 * 필드나 프로퍼티 설정 메서드에 @Resource 어노테이션이 적용으면 알맞은 빈 객체를 할당함
-* @Autowired 어노테이션은 \*타입을 기준\*으로 빈 객체를 선택
-* @Resource 어노테이션은 이름을 기준으로 빈 객체를 선택
+* @Autowired 어노테이션은 **타입을 기준**으로 빈 객체를 선택
+* @Resource 어노테이션은 **이름을 기준**으로 빈 객체를 선택
 
 
+
+
+
+
+
+
+
+    &lt;code&gt;
 
