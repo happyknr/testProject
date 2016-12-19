@@ -677,19 +677,13 @@ public class OrderService {
 
 * @Inject 어노테이션은 @Autowired 어노테이션이 required 속성을 이용해서 필수 여부를 지정할 수 있는 것과 달리 반드시 사용할 빈이 존재해야 함
 
+#### @Configuration과 의존 설정
 
+ - @Configuration 어노테이션을 사용할 경우, 여러 클래스에 빈 정보를 나눠서 설정할 수 있음
 
-
-
-
-
-
-
-
-
-
-
-    &lt;code&gt;
+```
+&lt;code&gt;
+```
 
 
 
