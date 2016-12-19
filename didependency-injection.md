@@ -502,6 +502,7 @@ public interface FactoryBean<T> {
 * @Autowired 어노테이션은 생성자, 필드, 메서드에 적용 가능
 
 ```
+/* class 파일 */
 public class OrderService {
     private ErpClientFactory erpClientFactory;
 
@@ -510,7 +511,31 @@ public class OrderService {
         this.erpClientFactory = erpClientFactory;
     }
 }
+
+
+<!-- XML 파일 -->
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context http;//www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:annotation-config /> <!-- 이 태그를 추가해야 어노테이션 인식할 수 있음 -->
+    
+    <bean id="orderService" class="net.madvirus.spring4.chap02.shop.OrderService">
+        <!-- erpClientFactory 프로퍼티에 대한 설정이 없음 -->
+    </bean>
+    
+    <bean id="ecFactory" class="net.madvirus.spring4.chap02.erp.ErpClientFactory" factory-method="instance">
+        ...
+    </bean>
+</bean>
 ```
+
+#### @Autowired 어노테이션 적용 프로피터의 필수 여부 지정
+
+ - 스프링은 @Autowired 어노테이션을 발견하면, 해당하는 스프링 빈 객체를 찾아서 설정하는데 빈 객체가 존재하지 않으면 스프링은 컨테이너를 초기화하는 과정에서 익셉션을 발생시킴
 
 
 
