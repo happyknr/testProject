@@ -442,6 +442,22 @@ public class ConfigWithXmlImport {
 
 * static 메서드를 이용해서 객체를 생성해야 할 경우 &lt;bean&gt; 태그에 factory-method 속성을 설정해야 함
 
+```
+public abstract class ErpClientFactory {
+    public static ErpClientFactory instance(Properties props) {
+        return new DefaltErpClientFactory(props);
+    }
+}
 
-    &lt;code&gt;
+
+<bean id="factory" class="net.madvirus.spring4.chap02.erp.ErpClientFactory" factory-method="instance">
+    <constructor-arg> <!-- static 메서드의 파라미터로 전달 -->
+        <props>
+            <prop key="server">10.50.0.101</prop>
+        </props>
+    </constructor-arg>
+</bean>
+```
+
+
 
