@@ -498,7 +498,8 @@ public interface FactoryBean<T> {
 
 #### @Autowired 어노테이션을 이용한 의존 자동 설정
 
- - org.springframework.beans.factory.annotation.Autowired
+* org.springframework.beans.factory.annotation.Autowired
+* @Autowired 어노테이션은 생성자, 필드, 메서드에 적용 가능
 
-
+    &lt;code&gt;
 
