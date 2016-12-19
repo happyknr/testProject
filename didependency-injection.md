@@ -679,10 +679,44 @@ public class OrderService {
 
 #### @Configuration과 의존 설정
 
- - @Configuration 어노테이션을 사용할 경우, 여러 클래스에 빈 정보를 나눠서 설정할 수 있음
+* @Configuration 어노테이션을 사용할 경우, 여러 클래스에 빈 정보를 나눠서 설정할 수 있음
 
 ```
-&lt;code&gt;
+@Configuration
+public class Config2 {
+    @Bean
+    public User user1() { ... }
+    @Bean(name = "user2")
+    public User user() { ... }
+    
+    @Bean
+    public UserRepository userRepository() {
+        UserRepository userRepo = new UserRepository();
+        userRepo.setUsers(Arrays.asList(user1(), user()));
+        return userRepo;
+    }
+}
+
+// Config1 클래스에서 다른 @Configuration 클래스에 정의된 @Bean을 이용하려고 할 때 아래와 같이 사용할 수 없음
+@Configuration
+public class Config1 {
+    @Bean
+    public PasswordChangeService pwChangeSvc() {
+        return new PasswordChangeService(userRepository 필요함!!);
+    }
+}
+
+// 아래와 같이 사용해야 함
+@Configuration
+public class Config1 {
+    @Autowired
+    private UserRepository userRepository;
+    
+    @Bean
+    public PasswordChangeService pwChangeSvc() {
+        return new PasswordChangeService(userRepository);
+    }
+}
 ```
 
 
