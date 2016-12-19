@@ -598,7 +598,7 @@ public class ConfigShop {
     public SearchClientFactoryBean orderSearchClientFactory() {
         SearchClientFactoryBean searchClientFactoryBean = new SearchClientFactoryBean();
         ...
-        
+
         return searchClientFactoryBean;
     }
 }
@@ -609,18 +609,24 @@ import org.springframework.beans.factory.annotation.Qualifier;
 
 public class OrderService {
     private ErpClientFactory erpClientFactory;
-    
+
     @Autowired
     @Qualifier("order") /* 필드 예제 */
     private SearchClientFactory searchClientFactory;
-    
+
     @Autowired
     public OrderService(ErpClientFactory erpClientFactory, 
         @Qualifier("order") SearchClientFactory searchClientFactory) { /* 생성자 예제 */
          this.erpClientFactory = erpClientFactory;
          this.searchClientFactory = searchClientFactory;
     }
+    ...
+}
 ```
+
+#### @Resource 어노테이션을 이용한 의존 자동 설정
+
+ - 필드나 프로퍼티 설정 메서드에 @Resource 어노테이션이 적용으면 알맞은 빈 객체를 할당함
 
 
 
