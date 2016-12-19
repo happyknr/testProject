@@ -630,13 +630,18 @@ public class OrderService {
 * @Autowired 어노테이션은 **타입을 기준**으로 빈 객체를 선택
 * @Resource 어노테이션은 **이름을 기준**으로 빈 객체를 선택
 
+```
+import javax.annotation.Resource;
+
+public class ProductService {
+    private SearchClientFactory searchClientFactory;
+    
+    @Resource(name="productSearchClientFactory")
+    public void setSearchClientFactory(SearchClientFactory searchClientFactory) {
+        this.searchClientFactory = searchClientFactory;
+    }
+}
+```
 
 
-
-
-
-
-
-
-    &lt;code&gt;
 
