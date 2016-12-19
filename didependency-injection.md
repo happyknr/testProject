@@ -537,13 +537,12 @@ public class OrderService {
 
 * 스프링은 @Autowired 어노테이션을 발견하면, 해당하는 스프링 빈 객체를 찾아서 설정하는데 빈 객체가 존재하지 않으면 스프링은 컨테이너를 초기화하는 과정에서 익셉션을 발생시킴
 
-
-
-
-
-
-
-
+```
+public class OrderService {
+    @Autowired
+    private Monitor monitor;
+}
+```
 
     &lt;code&gt;
 
