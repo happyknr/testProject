@@ -489,7 +489,7 @@ public interface FactoryBean<T> {
 
     <context:annotation-config /> <!-- 이 태그를 추가해야 어노테이션 인식할 수 있음 -->
     ...
-    
+
     <!-- 아래와 같이 해당 전처리기를 직접 등록해도 됨 -->
     <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />
     <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" />    
@@ -497,6 +497,8 @@ public interface FactoryBean<T> {
 ```
 
 #### @Autowired 어노테이션을 이용한 의존 자동 설정
+
+ - org.springframework.beans.factory.annotation.Autowired
 
 
 
