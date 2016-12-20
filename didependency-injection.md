@@ -860,10 +860,13 @@ import org.springframework.context.annotation.FilterType;
 
 * 스프링 컨테이너 주기
 
+
 1. 컨테이너 생성
 2. 빈 메타 정보\(XML이나 자바 기반 설정\)를 이용해서 빈 객체 생성
 3. 컨테이너 사용
 4. 컨테이너 종료\(빈 객체 제거\)
+
+
 
 
 
