@@ -721,5 +721,30 @@ public class Config1 {
 
 ### 컴포넌트 스캔을 이용한 빈 자동 등록
 
-    &lt;code&gt;
+```
+package net.madvirus.spring4.chap02.shop;
+
+import org.springframework.stereotype.Component;
+
+@Component /* OrderService 클래스 @Component 어노테이션 적용 */
+public class OderService {
+    ...
+}
+
+
+package net.madvirus.spring4.chap02.shop;
+
+import org.springframework.stereotype.Component;
+
+@Component /* ProductService 클래스 @Component 어노테이션 적용 */
+public class ProductService {
+    ...
+    @Resource(name="productSearchClientFactory")
+    public void setSearchClientFactory(SearchClientFactory searchClientFactory) {
+        this.searchClientFactory = searchClientFactory;
+    }
+}
+```
+
+
 
