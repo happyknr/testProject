@@ -739,7 +739,7 @@ import org.springframework.stereotype.Component;
 @Component /* ProductService 클래스 @Component 어노테이션 적용 */
 public class ProductService {
     ...
-    @Resource(name="productSearchClientFactory")
+    @Resource(name="productSearchClientFactory") /* 스캔을 통해 빈으로 등록될 경우, 자동 의존 설정이 필요함 */
     public void setSearchClientFactory(SearchClientFactory searchClientFactory) {
         this.searchClientFactory = searchClientFactory;
     }
@@ -761,5 +761,7 @@ public class ProductService {
 </bean>
 ```
 
- - 생성자나 프로퍼티에 의존 객체를 전달하려면 @Autowired와 같은 어노테이션을 사용해야 함
+* 생성자나 프로퍼티에 의존 객체를 전달하려면 @Autowired와 같은 어노테이션을 사용해야 함
+
+
 
