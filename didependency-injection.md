@@ -774,7 +774,6 @@ public class ConfigScan {
 
 * 생성자나 프로퍼티에 의존 객체를 전달하려면 @Autowired와 같은 어노테이션을 사용해야 함
 
-
 * @Component 어노테이션
   * org.springframework.stereotype.Component : 스프링 빈 임을 의미
   * org.springframework.stereotype.Service : DDD\(도메인 주도 설계\)에서의 서비스를 의미
@@ -784,9 +783,7 @@ public class ConfigScan {
 
 #### 자동 검색된 빈의 이름과 범위
 
-
-
-
+ - 스프링은 기본적으로 검색된 클래스를 빈으로 등록할 때, 클래스의\(첫 글자를 소문자로 바꾼\) 이름을 빈의 이름으로 사용
 
 
 
