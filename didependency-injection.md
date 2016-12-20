@@ -802,5 +802,9 @@ public lass OrderService {
 }
 ```
 
+#### 스캔 대상 클래스 범위 지정하기
+
+
+
 
 
