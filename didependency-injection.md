@@ -746,7 +746,7 @@ public class ProductService {
 }
 
 
-<!-- XML 파일 -->
+<!-- XML 파일에 설정할 경우 -->
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
     xmlns:context="http://www.springframework.org/schema/context" <!-- context -->
@@ -759,9 +759,22 @@ public class ProductService {
     <context:component-scan base-package="net.madvirus.spring4.chap04.shop" />
     ...
 </bean>
+
+
+/* 자바 코드에 설정할 경우 */
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@ComponentScan(basePackages="net.madvirus.spring4.chap02.shop")
+public class ConfigScan {
+    ...
+}
 ```
 
 * 생성자나 프로퍼티에 의존 객체를 전달하려면 @Autowired와 같은 어노테이션을 사용해야 함
+
+ - @Component 어노테이션
 
 
 
