@@ -721,7 +721,5 @@ public class Config1 {
 
 ### 컴포넌트 스캔을 이용한 빈 자동 등록
 
-
-
-
+    &lt;code&gt;
 
