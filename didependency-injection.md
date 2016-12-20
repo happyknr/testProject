@@ -814,5 +814,8 @@ public lass OrderService {
 </context:component-scan>
 ```
 
- - type 속성에 올 수 있는 값
+* type 속성에 올 수 있는 값
+*     
+
+    
 
