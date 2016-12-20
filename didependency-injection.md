@@ -838,9 +838,23 @@ import org.springframework.context.annotation.FilterType;
 )
 ```
 
- - 
+* @Filter 어노테이션의 type 속성에 따른 값 지정 방법
 
-     - 
+  * FilterType.ANNOTATION : \(value\) 특정 어노테이션이 적용된 클래스를 필터링 대상으로 삼음. Class 목록을 값을 가짐
+
+  * FilterType.ASSIGNABLE\_TYPE : \(value\) 지정한 타입에 할당 가능한 클래스를 필터링 대상으로 삼음. Class 목록을 값으로 가짐
+
+  * FilterType.REGEX : \(pattern\) 이름이 정규표현식에 매칭되는 클래스를 필터링 대상으로 삼음. 정규표현식 목록을 값으로 가짐
+
+  * FilterType.ASPECTJ : \(pattern\) 이름이 AspectJ 표현식에 매칭되는 클래스를 대상으로 삼음. AspectJ 표현식 목록을 값으로 가짐
+
+
+
+### 스프링 컨테이너 추가 설명
+
+#### 컨테이너의 빈 객체 구하기 위한 기본 메서드
+
+
 
 
 
