@@ -786,13 +786,21 @@ public class ConfigScan {
 
 * 스프링은 기본적으로 검색된 클래스를 빈으로 등록할 때, 클래스의\(첫 글자를 소문자로 바꾼\) 이름을 빈의 이름으로 사용
 
+```
+@Component
+public class ProductService {
+    ...
+}
+
+/* 위의 클래스의 경우 productService로 빈 객체를 가져오면 됨 */
+ProductService svc = context.getBean("productService", ProductService.class);
+
+/* 이름을 명시하고 싶을 경우 아래처럼 */
+@Component("orderService")
+public lass OrderService {
+    ...
+}
+```
 
 
-
-
-
-
-
-
-    &lt;code&gt;
 
