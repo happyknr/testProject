@@ -761,5 +761,5 @@ public class ProductService {
 </bean>
 ```
 
-
+ - 생성자나 프로퍼티에 의존 객체를 전달하려면 @Autowired와 같은 어노테이션을 사용해야 함
 
