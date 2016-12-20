@@ -899,5 +899,16 @@ AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(
 ctx.registerShutdownHook();
 ```
 
- - 자식 컨테이너의 빈은 부모 컨테이너의 빈을 참조할 수 있음\(의존 객체로 사용할 수 있음\)
+* 자식 컨테이너의 빈은 부모 컨테이너의 빈을 참조할 수 **있음**\(의존 객체로 사용할 수 있음\)
+* 부모 컨테이너의 빈은 자식 컨테이너에 속한 빈음 참조할 수 **없음**
+
+```
+GenericXmlApplicationContext parent = new GenericXmlApplicationContext("classpath:conf-parent.xml");
+GenericXmlApplicationContext child = new GenericXmlApplicationContext();
+child.setParent(parent); /* 부모-자식 관계 설정 */
+child.load("classpath:conf-child.xml");
+child.refresh();
+```
+
+ - 자식 컨테이너 빈을 초기화하기 전에 부모 컨테이너를 먼저 지정해야 함!!
 
