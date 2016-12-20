@@ -688,7 +688,7 @@ public class Config2 {
     public User user1() { ... }
     @Bean(name = "user2")
     public User user() { ... }
-    
+
     @Bean
     public UserRepository userRepository() {
         UserRepository userRepo = new UserRepository();
@@ -711,10 +711,10 @@ public class Config1 {
 public class Config1 {
     @Autowired
     private UserRepository userRepository;
-    
+
     @Bean
     public PasswordChangeService pwChangeSvc() {
-        return new PasswordChangeService(userRepository);
+        return new PasswordChangeService(userRepository 필요함!!);
     }
 }
 ```
