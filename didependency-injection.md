@@ -865,5 +865,39 @@ import org.springframework.context.annotation.FilterType;
 3. 컨테이너 사용
 4. 컨테이너 종료\(빈 객체 제거\)
 
+```
+// 빈 메타 정보를 컨테이너 생성 시점에 제공해서, 빈 객체 생성
+GenericXmlApplicationContext ctx = new GenericXmlApplicationContext("classpath:config.xml");
 
+// 위 설정과도 동일함(1~2번)
+// XML 설정
+// 1. 컨테이너 생성
+GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();
+// 2. 메타 정보 제공 및
+ctx.load("classpath:config.xml");
+// 2. 빈 객체 생성 (읽어온 메타 정보로 빈 객체 재생성)
+ctx.refresh();
+
+// 자바 설정
+// 1. 컨테이너 생성
+AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
+// 2. 메타 정보 제공 및
+ctx.register(Config.class);
+// 2. 빈 객체 생성 (읽어온 메타 정보로 빈 객체 재생성)
+ctx.refresh();
+
+// 3. 컨테이너 사용
+AuthenticationService authSvc = ctx.getBean("authenticationService", AuthenticationService.class);
+
+// 4. 컨테이너 종료
+ctx.close();
+
+// 컨테이너 종료 시(close() 메서드 호출 시)에 빈도 소멸됨. 예기치 않은 종료 시 (Ctrl+C로 종료하는 경우)
+// close() 메서드가 호출되지 않음. 이런 상황에 registerShutdownHook() 메서드 사용!!
+AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(Config.class);
+// JVM이 종료될 때, 컨테이너 종료 과정이 실행됨
+ctx.registerShutdownHook();
+```
+
+ - 자식 컨테이너의 빈은 부모 컨테이너의 빈을 참조할 수 있음\(의존 객체로 사용할 수 있음\)
 
