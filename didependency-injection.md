@@ -815,14 +815,14 @@ public lass OrderService {
 ```
 
 * type 속성에 올 수 있는 값
-* ㄴㅇㄹ
 
-* ㄴㅇㄹㄴㅇㄹ
+  * annotation : 클래스에 지정한 어노테이션이 적용됐는지의 여부, expression 속성에는 "org.example.SomeAnnotation" 과 같이 어노테이션 이름을 입력
 
+  * assignable : 클래스가 지정한 타입으로 할당 가능한지의 여부, expression 속성에는 "org.example.SomeClass"와 같이 타입 이름을 입력
 
-* annotation :
+  * regex : 클래스 이름이 정규 표현식에 매칭되는지의 여부, expression 속성에는 "org\.example\.Default.\*"와 같이 정규 표현식 입력
 
-    - 
+  * aspectj : 클래스 이름이 AspectJ의 표현식에 매칭되는지의 여부, expression 속성에는 "org.example..\*Service+"와 같이 AspectJ의 표현식을 입력
 
 
 
