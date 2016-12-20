@@ -854,7 +854,11 @@ import org.springframework.context.annotation.FilterType;
 
 #### 컨테이너의 빈 객체 구하기 위한 기본 메서드
 
+설명
 
+#### 스프링 컨테이너의 생성과 종료
+
+ - 스프링 컨테이너 주기
 
 
 
