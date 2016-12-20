@@ -826,13 +826,17 @@ public lass OrderService {
 
 
 
+```
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.ComponentScan.Filter;
+import org.springframework.context.annotation.FilterType;
 
+@Configuration
+@ComponentScan(basePackages="net.madvirus.spring4.chap02.shop",
+    includeFilters={@Filter(type=FilterType.REGEX, pattern=".*Service")},
+    excludeFilters=@Filter(type=FilterType.ASPECTJ, pattern="net..*Dao")
+)
+```
 
-
-
-
-
-
-
-    &lt;code&gt;
+    - 
 
