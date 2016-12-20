@@ -754,6 +754,8 @@ public class ProductService {
     xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context http;//www.springframework.org/schema/context/spring-context.xsd">
 
+    <!-- base-package 속성에 지정한 패키지 및 그 하위 패키지에 위치한 클래스 중에서 
+         @Component 어노테이션이 적용된 클래스를 검색해서 스프링 빈으로 등록 -->
     <context:component-scan base-package="net.madvirus.spring4.chap04.shop" />
     ...
 </bean>
