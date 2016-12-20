@@ -807,15 +807,12 @@ public lass OrderService {
 * &lt;context:include-filter&gt;
 * &lt;context:exclude-filter&gt;
 
+```
+<context:component-scan base-package="net.madvirus.spring.chap02.shop">
+    <context:include-filter type="regex" expression=".*Service"/>
+    <context:exclude-filter type="aspectj" expression="net..*Dao"/>
+</context:component-scan>
+```
 
-
-
-
-
-
-
-
-    &lt;code&gt;
-
-
+ - type 속성에 올 수 있는 값
 
